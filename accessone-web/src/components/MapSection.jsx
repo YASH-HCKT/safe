@@ -21,6 +21,10 @@ const MapSection = ({ showSidebar = true, showNavPanel = true, showSOS = true })
                 return;
             }
 
+            window.gm_authFailure = () => {
+                alert("Google Maps failed to load. Please check your API key and billing status.");
+            };
+
             const script = document.createElement('script');
             script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&libraries=marker&v=weekly`;
             script.async = true;

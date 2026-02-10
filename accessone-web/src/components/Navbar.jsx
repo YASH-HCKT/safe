@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-center">
-            <nav className="glassmorphism max-w-[1200px] w-full flex items-center justify-between px-8 py-3 rounded-xl">
+            <nav className="glassmorphism w-full flex items-center justify-between px-8 py-4 rounded-2xl mx-4">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3">
                     <div className="bg-primary p-1.5 rounded-lg flex items-center justify-center">
@@ -61,21 +61,39 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/* Auth Buttons */}
-                <div className="flex items-center gap-4">
-                    {user ? (
+                {/* Auth Buttons & Actions */}
+                <div className="flex items-center gap-6">
+                    {user && (
                         <>
-                            <span className="hidden sm:block text-sm font-semibold text-white/90">
-                                {user.name}
-                            </span>
-                            <button
-                                onClick={logout}
-                                className="bg-white/10 hover:bg-white/20 transition-all text-white text-sm font-bold px-6 py-2.5 rounded-lg"
-                            >
-                                Logout
+                            {/* Notifications */}
+                            <button className="relative p-2 text-white/70 hover:text-white transition-colors">
+                                <span className="material-symbols-outlined text-[24px]">notifications</span>
+                                <span className="absolute top-1 right-1 size-2.5 bg-red-500 rounded-full border-2 border-[#1a1a1a]"></span>
                             </button>
+
+                            {/* Settings */}
+                            <Link to="/settings" className="p-2 text-white/70 hover:text-white transition-colors">
+                                <span className="material-symbols-outlined text-[24px]">settings</span>
+                            </Link>
+
+                            <div className="h-6 w-px bg-white/10 mx-2 hidden sm:block"></div>
+
+                            <Link to="/profile" className="flex items-center gap-3 group">
+                                <div className="size-9 rounded-full border-2 border-primary/50 overflow-hidden group-hover:border-primary transition-all">
+                                    <img
+                                        src={user.profilePic || "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200"}
+                                        alt={user.name}
+                                        className="size-full object-cover"
+                                    />
+                                </div>
+                                <span className="hidden sm:block text-sm font-semibold text-white/90 group-hover:text-white">
+                                    {user.name}
+                                </span>
+                            </Link>
                         </>
-                    ) : (
+                    )}
+
+                    {!user && (
                         <>
                             <Link
                                 to="/login"
