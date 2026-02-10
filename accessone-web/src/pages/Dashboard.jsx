@@ -42,13 +42,13 @@ const Dashboard = () => {
     return (
         <div className="relative flex h-screen w-full overflow-hidden bg-background-dark">
             {/* Map Background */}
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#191022_0%,#0a070d_100%)]">
+            <div className="absolute inset-0 z-0 bg-[#0a070d]">
                 <div
                     className="absolute inset-0 opacity-40"
                     style={{
-                        backgroundImage: "url('https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/-122.4194,37.7749,12,0/1200x800?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw')",
+                        backgroundImage: `url('https://maps.googleapis.com/maps/api/staticmap?center=37.7749,-122.4194&zoom=12&size=1200x800&scale=2&maptype=roadmap&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d')`,
                         backgroundSize: 'cover',
-                        filter: 'grayscale(1) invert(1) brightness(0.5)'
+                        backgroundPosition: 'center'
                     }}
                 />
                 {/* Simulated Route Line */}
