@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AccessOne | Premium Accessibility Map</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8c25f4',
+            accent: '#a855f7',
+            darkBg: '#0f172a',
+            glass: 'rgba(30, 41, 59, 0.7)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-glassmorphism">
+    .glass-effect {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .neon-border {
+      box-shadow: 0 0 15px rgba(140, 37, 244, 0.4);
+    }
+    /* Hide Google Maps default UI elements for a cleaner look */
+    .gm-style-mtc, .gm-svpc, .gm-style-cc {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans h-screen w-screen overflow-hidden">
+<!-- BEGIN: MainContainer -->
+<main class="relative h-full w-full">
+<!-- BEGIN: FullScreenMap -->
+<div class="absolute inset-0 z-0 bg-slate-900" data-purpose="interactive-map-area" id="map">
+<!-- Fallback message if API fails or loading -->
+<div class="flex items-center justify-center h-full text-slate-500">
+        Loading Interactive Accessibility Map...
+      </div>
+</div>
+<!-- END: FullScreenMap -->
+<!-- BEGIN: HeaderAndSearch -->
+<header class="absolute top-6 left-1/2 -translate-x-1/2 z-20 w-full max-w-2xl px-4" data-purpose="top-navigation">
+<div class="glass-effect glass rounded-custom p-2 flex items-center gap-4 shadow-2xl">
+<div class="flex items-center px-4 border-r border-slate-700">
+<span class="text-primary font-bold tracking-tighter text-xl">AccessOne</span>
+</div>
+<div class="flex-1 relative">
+<input class="w-full bg-transparent border-none focus:ring-0 text-slate-200 placeholder-slate-400 py-2" placeholder="Search for accessible destinations..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-accent transition-colors p-2 rounded-custom">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- END: HeaderAndSearch -->
+<!-- BEGIN: SidebarFilters -->
+<aside class="absolute left-6 top-24 bottom-24 w-72 z-20" data-purpose="accessibility-filters">
+<div class="glass-effect glass h-full rounded-custom p-6 flex flex-col gap-6 shadow-xl">
+<h2 class="text-lg font-semibold border-b border-slate-700 pb-2">Accessibility Filters</h2>
+<div class="space-y-4">
+<!-- Filter Item -->
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+<span class="text-slate-300 group-hover:text-white transition-colors">Ramps &amp; Slopes</span>
+</div>
+<input checked="" class="form-checkbox h-4 w-4 rounded bg-slate-800 border-slate-600 text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-blue-400"></div>
+<span class="text-slate-300 group-hover:text-white transition-colors">Elevators</span>
+</div>
+<input checked="" class="form-checkbox h-4 w-4 rounded bg-slate-800 border-slate-600 text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-purple-400"></div>
+<span class="text-slate-300 group-hover:text-white transition-colors">Quiet Zones</span>
+</div>
+<input class="form-checkbox h-4 w-4 rounded bg-slate-800 border-slate-600 text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+<span class="text-slate-300 group-hover:text-white transition-colors">Tactile Paving</span>
+</div>
+<input class="form-checkbox h-4 w-4 rounded bg-slate-800 border-slate-600 text-primary focus:ring-primary" type="checkbox"/>
+</div>
+</div>
+<div class="mt-auto">
+<div class="p-4 bg-slate-800/50 rounded-custom border border-slate-700">
+<p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Current Status</p>
+<p class="text-sm font-medium text-green-400">Optimal Route Available</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- END: SidebarFilters -->
+<!-- BEGIN: LiveNavigationPanel -->
+<div class="absolute right-6 top-24 w-80 z-20" data-purpose="live-navigation-panel">
+<div class="glass-effect glass rounded-custom p-6 shadow-xl neon-border">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Live Navigation</span>
+<span class="px-2 py-1 bg-green-500/20 text-green-400 text-[10px] rounded-full font-bold">SAFE ROUTE</span>
+</div>
+<div class="flex items-end gap-2 mb-6">
+<span class="text-4xl font-bold">12</span>
+<span class="text-slate-400 pb-1">min</span>
+<span class="text-slate-600 mx-2">|</span>
+<span class="text-xl font-medium">1.2 <span class="text-sm text-slate-400">km</span></span>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<div class="w-0.5 h-10 bg-slate-700 my-1"></div>
+<div class="w-3 h-3 rounded-full border-2 border-slate-500"></div>
+</div>
+<div class="flex flex-col justify-between text-sm py-0.5">
+<span class="text-white font-medium">Central Station</span>
+<span class="text-slate-400">St. Mary's Library</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 bg-slate-100 text-slate-900 font-bold py-3 rounded-custom hover:bg-white transition-all">
+          Start Journey
+        </button>
+</div>
+</div>
+<!-- END: LiveNavigationPanel -->
+<!-- BEGIN: SOSButton -->
+<div class="absolute bottom-10 right-10 z-30" data-purpose="emergency-controls">
+<button class="group flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+</span>
+        ACTIVE SOS
+      </button>
+</div>
+<!-- END: SOSButton -->
+</main>
+<!-- END: MainContainer -->
+<!-- BEGIN: GoogleMapsScript -->
+<script data-purpose="google-maps-api-config">
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Re-trying here."):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyB1R_jPAkOX9jD8zkSGPcm1ZsktdKOdfGo",
+      v: "weekly",
+    });
+
+    let map;
+
+    async function initMap() {
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+
+      // Dark Mode Styles for Google Maps
+      const darkMapStyles = [
+        { "elementType": "geometry", "stylers": [{ "color": "#1e293b" }] },
+        { "elementType": "labels.text.fill", "stylers": [{ "color": "#94a3b8" }] },
+        { "elementType": "labels.text.stroke", "stylers": [{ "color": "#1e293b" }] },
+        { "featureType": "administrative", "elementType": "geometry", "stylers": [{ "color": "#334155" }] },
+        { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [{ "color": "#8c25f4" }] },
+        { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#0f172a" }] },
+        { "featureType": "road", "elementType": "geometry", "stylers": [{ "color": "#334155" }] },
+        { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#1e293b" }] },
+        { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "color": "#475569" }] },
+        { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#020617" }] }
+      ];
+
+      map = new Map(document.getElementById("map"), {
+        center: { lat: 40.7128, lng: -74.0060 }, // New York
+        zoom: 14,
+        styles: darkMapStyles,
+        disableDefaultUI: true,
+        mapId: "DEMO_MAP_ID", // Required for AdvancedMarkerElement
+      });
+
+      // Add Dummy Markers
+      const locations = [
+        { lat: 40.7150, lng: -74.0020, type: 'barrier-free' },
+        { lat: 40.7100, lng: -74.0100, type: 'construction' },
+        { lat: 40.7180, lng: -74.0080, type: 'barrier-free' }
+      ];
+
+      locations.forEach(loc => {
+        const pinColor = loc.type === 'barrier-free' ? '#22c55e' : '#f97316';
+        const pin = new PinElement({
+          background: pinColor,
+          borderColor: "#ffffff",
+          glyphColor: "white",
+        });
+
+        new AdvancedMarkerElement({
+          map,
+          position: loc,
+          content: pin.element,
+          title: loc.type === 'barrier-free' ? "Accessible Zone" : "Work in Progress",
+        });
+      });
+    }
+
+    initMap();
+  </script>
+<!-- END: GoogleMapsScript -->
+</body></html>
