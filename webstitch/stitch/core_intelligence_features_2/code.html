@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Core Intelligence Features - AccessOne</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3211d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0910",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(50, 17, 212, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 30px rgba(50, 17, 212, 0.15);
+        }
+        .neon-text-primary {
+            text-shadow: 0 0 10px rgba(50, 17, 212, 0.5);
+        }::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0910;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3211d4;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-slate-100 antialiased overflow-hidden">
+<div class="relative h-screen flex flex-col">
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] -z-10 opacity-50"></div>
+<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10 opacity-50"></div>
+<header class="flex items-center justify-between whitespace-nowrap border-b border-white/5 px-6 lg:px-20 py-3 glass-card shrink-0">
+<div class="flex items-center gap-2">
+<div class="size-5 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold tracking-tight">AccessOne</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-400 hover:text-white text-xs font-medium transition-colors" href="#">Features</a>
+<a class="text-slate-400 hover:text-white text-xs font-medium transition-colors" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-white text-xs font-medium transition-colors" href="#">Pricing</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-8 px-4 bg-primary text-white text-xs font-bold transition-all hover:bg-primary/80">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1400px] mx-auto px-6 py-4 flex flex-col justify-center w-full overflow-hidden">
+<div class="text-center mb-6">
+<span class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-1 block">Next-Generation AI</span>
+<h1 class="text-white text-3xl md:text-4xl font-black tracking-tight leading-none mb-2">
+                Core Intelligence Features
+            </h1>
+<p class="text-slate-400 text-sm max-w-xl mx-auto font-normal leading-relaxed">
+                Empowering accessibility through advanced AI and real-time data insights.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 flex-1 max-h-[600px]">
+<div class="md:col-span-8 md:row-span-2 glass-card rounded-xl p-6 flex flex-col justify-between group overflow-hidden relative">
+<div class="relative z-10">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">AI-POWERED NAVIGATION</span>
+<h3 class="text-white text-2xl font-bold mt-1">Smart Accessibility Map</h3>
+<p class="text-slate-400 mt-2 text-sm max-w-xs leading-snug">Real-time optimal routes for wheelchair accessibility and low-sensory environments.</p>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-30 group-hover:opacity-50 transition-opacity">
+<div class="w-full h-full bg-slate-800 rounded-bl-3xl border-l border-b border-white/10 overflow-hidden">
+<img alt="Map visualization" class="w-full h-full object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlDbfIKwvqFmeESZ_I-iE_sT6SB8p56EuQpwjYQEqnxV5LjgL8vnkbcr_iCTXp8s7HZksO0Xv1rgfFMpB4cZIbmt0pMOavevL708buQnvn8NcGoK9NaZlKq8bfAd7w9AM3_A950BwgkMBcq4j0e0B1y-6YHWtvINu9ddzDIx4J0LF5hBBImM-fdUFbueeCAgy8kFJhOq0wYhsi2Ag0FjDWk9ZqcGzlDkYseJp2BJbp7YHdOm-cvUXAUbj95JsOspHhmtdI_aK9rxyw"/>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-4 z-10">
+<div class="flex items-center gap-2 bg-primary/20 border border-primary/30 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary text-xs">route</span>
+<span class="text-[10px] font-semibold text-primary">Live Routing</span>
+</div>
+<button class="text-white text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                        Explore Map <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 md:row-span-2 glass-card rounded-xl p-6 flex flex-col justify-between border-red-500/20 hover:border-red-500/40">
+<div>
+<span class="text-red-500 text-[10px] font-bold uppercase tracking-[0.2em]">CRITICAL RESPONSE</span>
+<h3 class="text-white text-2xl font-bold mt-1">AI Emergency SOS</h3>
+</div>
+<div class="my-2 flex justify-center items-center h-24 relative">
+<div class="absolute inset-0 bg-red-500/5 rounded-full blur-2xl animate-pulse"></div>
+<div class="w-20 h-20 rounded-full bg-red-500/10 border-2 border-red-500/40 flex items-center justify-center group-hover:scale-105 transition-transform cursor-pointer shadow-[0_0_30px_rgba(239,68,68,0.2)]">
+<span class="material-symbols-outlined text-red-500 text-4xl font-light">emergency_share</span>
+</div>
+</div>
+<p class="text-slate-400 text-xs mb-3 text-center">One-tap emergency response with automated health data sharing.</p>
+<button class="w-full py-2 bg-red-500 text-white text-xs font-bold rounded-lg hover:bg-red-600 transition-colors shadow-lg shadow-red-500/20">
+                    Activate Shield
+                </button>
+</div>
+<div class="md:col-span-3 glass-card rounded-xl p-4 flex flex-col justify-between border-orange-500/10 hover:border-orange-500/30">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-500 text-lg">warning</span>
+</div>
+<span class="text-orange-500 text-[9px] font-bold uppercase tracking-[0.1em]">REAL-TIME</span>
+</div>
+<div>
+<h4 class="text-white text-sm font-bold mt-2">Live Crisis Alerts</h4>
+<p class="text-slate-400 text-[11px] mt-0.5">Instant hazard updates.</p>
+</div>
+</div>
+<div class="md:col-span-3 glass-card rounded-xl p-4 flex flex-col justify-between group border-primary/10 hover:border-primary/30">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg group-hover:scale-110 transition-transform">keyboard_voice</span>
+</div>
+<span class="text-primary text-[9px] font-bold uppercase tracking-[0.1em]">VOICE</span>
+</div>
+<div>
+<h4 class="text-white text-sm font-bold mt-2">AI Voice Assistant</h4>
+<p class="text-slate-400 text-[11px] mt-0.5">Natural NLP control.</p>
+</div>
+</div>
+<div class="md:col-span-6 glass-card rounded-xl p-1 bg-gradient-to-br from-primary/30 via-transparent to-primary/10">
+<div class="h-full w-full bg-background-dark/90 rounded-[10px] p-5 flex items-center justify-between gap-4">
+<div class="flex-1">
+<h4 class="text-white text-lg font-bold leading-tight">Ready for the future?</h4>
+<p class="text-slate-400 text-xs mt-1">Join thousands using AccessOne.</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2 px-4 rounded-lg transition-all shadow-lg shadow-primary/20 whitespace-nowrap">
+                            Try Now
+                        </button>
+<button class="bg-white/5 hover:bg-white/10 text-white text-xs font-bold py-2 px-4 rounded-lg border border-white/10 transition-all whitespace-nowrap">
+                            Demo
+                        </button>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-4 flex items-center gap-4 border-emerald-500/10 hover:border-emerald-500/30">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-emerald-500">health_metrics</span>
+</div>
+<div>
+<h4 class="text-white text-sm font-bold">Health Assistant</h4>
+<p class="text-slate-400 text-[11px]">Medication &amp; biometrics.</p>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-4 flex items-center gap-4">
+<div class="flex -space-x-3 shrink-0">
+<div class="h-8 w-8 rounded-full ring-2 ring-background-dark bg-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVQxZ3DNdT0qDGUqRB8m-3iRbpq5MDoYyGhNhI_UgRDBtnbFYo6P97t4jzxKN0xxWU7r15ILAcesH8ETx2t_RviCaG1KiCd_1vNGM-eyHN1-ilOQ_XhXFQXwFJmtPBM8DRciKUP6iHkV7tW2ZIGkXW1cC_m1-vtH2XLdXyxqPKT16M5-7S2ZqIcpHyQUFIMWBkahcm4amo8nwJH851CiYCUycGYmE-UNrpUPlPDU6GVeJ8ogDaKA-OjXnZo-u1ZZF9agmWVJufqQSj')"></div>
+<div class="h-8 w-8 rounded-full ring-2 ring-background-dark bg-slate-800 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE7Gw1Z721XZ9yYzAEmkj5iSeukqY1q9b4Mhe742vDzRBl9CBZ-lwsw-mT3jAVPUTfD05r7UbHvBmzZe-6O4N9EfqSkYLsqERgNmwye_j2FywIgiqph0sAwiWgHlcnO9PRkVTN2HwleWUi_5jB_hnjfvupbUdtaQWHvcU9-avO_MZ9Td20zbFguWB32zWJ94OieHBPm6OIF6rKlkHvE2ocM5Jk5gr5dTaKo5KhZMOZlWyWgeUPsbQLlLpE1PWwzubrnCjuTC-aVhl1')"></div>
+<div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-background-dark bg-primary text-white text-[8px] font-bold">+2k</div>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-white text-sm font-bold truncate">Community Support</h4>
+<p class="text-slate-400 text-[11px] truncate">Global network of helpers.</p>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-4 flex items-center justify-between border-white/5">
+<div>
+<h4 class="text-white text-sm font-bold">Data Insights</h4>
+<p class="text-slate-400 text-[11px]">Real-time street mapping.</p>
+</div>
+<div class="flex gap-1.5 h-6 items-end">
+<div class="w-1.5 bg-primary/20 rounded-full h-1/2"></div>
+<div class="w-1.5 bg-primary/60 rounded-full h-full"></div>
+<div class="w-1.5 bg-primary/40 rounded-full h-3/4"></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-white/5 py-3 shrink-0">
+<div class="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="size-3 text-primary/60">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-slate-600 text-[10px]">© 2024 AccessOne AI Intelligence.</span>
+</div>
+<div class="flex gap-4">
+<a class="text-slate-600 hover:text-white text-[10px] transition-colors" href="#">Privacy</a>
+<a class="text-slate-600 hover:text-white text-[10px] transition-colors" href="#">Terms</a>
+<a class="text-slate-600 hover:text-white text-[10px] transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inclusion Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#607AFB", "background-light": "#f5f6f8", "background-dark": "#0f1323", "card-dark": "#192434", "border-dark": "#324867"}, fontFamily: {display: "Lexend"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 28px;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 border-b border-slate-200 dark:border-border-dark/30">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile photo of a smiling man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCYcuiHaFH3YA8CpCEEU1KlHORgh7n1ZHzqEGLVpT2Jo4uAtRms5dxysBxbYLpuuHtVRUCto34FShEiIKyTK3MfL4AvfLpFjB-D3CcW2Vy4qKGJDI85DQ5JXDwzTtwmEes8dGPMa923VTL68YYipRXfLs_P-TLeVvgJ1N10g_oiN5df37ds0DLkfdPEiVUEg6SEHUS2w8dyHrv3NgZmRItyN9FOefGkAD7q1bw050aDWj65PP632Cfsq8Zz84TF9YhLx6LFpgjM3An");'></div>
+</div>
+<div class="flex-1 px-3">
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs font-medium uppercase tracking-wider">Welcome back</p>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Alex Johnson</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-xl bg-slate-100 dark:bg-card-dark text-slate-700 dark:text-white transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-xl bg-slate-100 dark:bg-card-dark text-slate-700 dark:text-white transition-colors active:scale-95">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Greeting Section -->
+<section class="px-4 pt-6 pb-2">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-3xl font-extrabold leading-tight">Choose your mode</h1>
+<p class="text-slate-500 dark:text-[#91a9ca] mt-1 text-base">Select the assistance profile that fits your needs best today.</p>
+</section>
+<!-- Accessibility Grid -->
+<section class="grid grid-cols-2 gap-4 p-4">
+<!-- Visual Card -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-5 flex-col shadow-sm active:bg-primary/10 transition-colors cursor-pointer group">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-active:bg-primary group-active:text-white transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Visual</h3>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm font-normal leading-snug">Screen reader &amp; high contrast</p>
+</div>
+</div>
+<!-- Auditory Card -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-5 flex-col shadow-sm active:bg-primary/10 transition-colors cursor-pointer group">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-active:bg-primary group-active:text-white transition-colors">
+<span class="material-symbols-outlined">hearing</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Auditory</h3>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm font-normal leading-snug">Live captions &amp; haptic alerts</p>
+</div>
+</div>
+<!-- Motor Card -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-5 flex-col shadow-sm active:bg-primary/10 transition-colors cursor-pointer group">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-active:bg-primary group-active:text-white transition-colors">
+<span class="material-symbols-outlined">front_hand</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Motor</h3>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm font-normal leading-snug">Voice control &amp; big targets</p>
+</div>
+</div>
+<!-- Cognitive Card -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-5 flex-col shadow-sm active:bg-primary/10 transition-colors cursor-pointer group">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-active:bg-primary group-active:text-white transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Cognitive</h3>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm font-normal leading-snug">Focus mode &amp; simple terms</p>
+</div>
+</div>
+</section>
+<!-- Emergency Assistance Call to Action -->
+<section class="px-4 py-4">
+<div class="flex items-center justify-between bg-red-500/10 border border-red-500/20 p-5 rounded-xl">
+<div class="flex items-center gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white animate-pulse">
+<span class="material-symbols-outlined">emergency</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg">Emergency Help</h3>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm">Instant support and SOS</p>
+</div>
+</div>
+<button class="bg-red-500 text-white px-6 py-3 rounded-lg font-bold text-sm shadow-lg shadow-red-500/30 active:scale-95">
+                    SOS
+                </button>
+</div>
+</section>
+<!-- Daily Highlights Section -->
+<section class="pt-4">
+<div class="flex items-center justify-between px-4 pb-3">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Daily Highlights</h2>
+<button class="text-primary text-sm font-semibold">See all</button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 snap-x no-scrollbar">
+<!-- Highlight Card 1 -->
+<div class="flex-none w-[280px] snap-start bg-white dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="h-40 bg-center bg-no-repeat bg-cover" data-alt="Group of diverse people laughing at a community center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAz27dykMWhkF4iD64BukF2FeobeEnWAKvoRdqWQF7Ma4ZXqjBvMkJa48UXcs5ZSlAzaUUQmC8r_S72wP2G-PCuHDy7qnZefNnqER3_QTU49pAIHmd0qIjLb2K6M8uqRX3bSEQX3Vq3ySbvyeys9RYWY8gFzdkEJblWzIsis7y5jltXbB6SDCwvoKpdAnXgXFOriQuLsalooSJURrEQ872yABXwIzT3b2sWdlX8Ss4Q7IC6g0Jz559UIuOV4YE21woPNVFb-Z2fGZh9");'></div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase mb-2">Community</span>
+<h4 class="text-slate-900 dark:text-white font-bold text-base leading-snug mb-1">Local Accessibility Meetup</h4>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs">Join us this Saturday for tech workshops.</p>
+</div>
+</div>
+<!-- Highlight Card 2 -->
+<div class="flex-none w-[280px] snap-start bg-white dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="h-40 bg-center bg-no-repeat bg-cover" data-alt="Close up of a person using a high-tech braille reader" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZAMyUzMONu02dzyzQEyh9xV210pAkF3_a5TZky1OKteF4mtqi2YQaZ6h1aJaKv2yxg-WZVaYgvmpT-Hrw3h-uOqt9Tf3FzL0kfhgSPibi3L7ouvzEtFLFPZPHiAClVabX9awSQaKUoy7ybNT9om1PAgLFZM_1iywuZ23D5P_IVNUSQmUJe80eIgthwHRaX00Wetddr8a6QF9OK2sdnnvnjmuVQylGRdDXvw0WacgmIl-cVF67JYbb8hdrsTe2CzFXsINFTWqfWMhs");'></div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 rounded bg-green-500/10 text-green-500 text-[10px] font-bold uppercase mb-2">Tech Tips</span>
+<h4 class="text-slate-900 dark:text-white font-bold text-base leading-snug mb-1">Braille Tech Evolution</h4>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs">Exploring the latest in digital tactile displays.</p>
+</div>
+</div>
+<!-- Highlight Card 3 -->
+<div class="flex-none w-[280px] snap-start bg-white dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="h-40 bg-center bg-no-repeat bg-cover" data-alt="Woman using voice commands on a laptop in a bright office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCylOXBOtyhMwItRzFmTM6BeCiZ5HsKSlPTjFpJlQJZ28WwheCk0Qrjwn9DsVsKIU0zFRWq-N1dD3SAApD-DkIC7w2KK9wQpxaQey7oik1ZlB7cmKEo8Zo0AoNBpzO6NWpwI5VC7RPyngp2dYJUdUetZTnsWe7eHyJXWjgnnyi-HZ9rNLz06v8CUHNcRgoApmZA8SemQ4Ns5H6_rzqFBV0rxJraGRjZu29w8V7MfXwcNGb2VKih2r-zale35BUreoPLTHVrUEap97RV");'></div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 rounded bg-orange-500/10 text-orange-500 text-[10px] font-bold uppercase mb-2">Guides</span>
+<h4 class="text-slate-900 dark:text-white font-bold text-base leading-snug mb-1">Mastering Voice Control</h4>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs">5 shortcuts every user should know.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 w-full max-w-[100vw] bg-white dark:bg-background-dark border-t border-slate-200 dark:border-border-dark px-6 py-3 flex items-center justify-between z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#91a9ca] hover:text-primary active:text-primary transition-colors">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#91a9ca] hover:text-primary active:text-primary transition-colors">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#91a9ca] hover:text-primary active:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+</div>
+<!-- No Scrollbar CSS -->
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

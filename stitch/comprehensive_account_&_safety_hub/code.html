@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comprehensive Account &amp; Safety Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative pb-24">
+<!-- Header / Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-white/10">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Account &amp; Safety</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-white/10">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</header>
+<!-- Profile Section -->
+<section class="px-6 py-6 flex flex-col items-center">
+<div class="relative">
+<div class="w-32 h-32 rounded-full border-4 border-primary p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Portrait of a smiling verified user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzoh6u2gVg3rJBjHha2J6pluOLa3nRyLc4EWluSMQTZKrdX2Dtpty8RvTp3q0F4PXXp6O3No5_7IvYwNkfROPFwXxis2G7HwIhDgKOsvjNIHvkCLz5enqrdl3JDF4Q5THGHhibQ18j5_vv22xOnX3h6eUVA1P7JakdOcuk87rQIuO81ds3LbIcwk95HvFrKsDPAt6UCysJ2Bnoe9y7n-wMRx50GDiX6VM5omQQGD3Z3A2sQuwAPtgCWMR-Zi-u0TVw6_J7FI5sv1OI')"></div>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-background-dark rounded-full p-1 border-4 border-background-dark">
+<span class="material-symbols-outlined text-sm font-bold block">verified</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h2 class="text-2xl font-bold">Alex Johnson</h2>
+<p class="text-primary font-medium">Verified Member</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Member since July 2022</p>
+</div>
+</section>
+<!-- Current Mode Card -->
+<section class="px-6 py-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">Current Mode</h3>
+<div class="bg-primary/10 border border-primary/30 rounded-xl p-5 flex items-center gap-4">
+<div class="w-14 h-14 bg-primary text-background-dark rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">accessible</span>
+</div>
+<div class="flex-1">
+<p class="text-lg font-bold text-primary">Motor &amp; Mobility</p>
+<p class="text-sm text-slate-600 dark:text-slate-300">High-sensitivity touch enabled</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</section>
+<!-- Emergency & Safety Grid -->
+<section class="px-6 py-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">Emergency &amp; Safety</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl flex flex-col gap-3 border border-transparent active:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">medical_information</span>
+<div>
+<p class="font-bold">Medical ID</p>
+<p class="text-xs text-slate-500">Allergies &amp; Meds</p>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-white/5 p-4 rounded-xl flex flex-col gap-3 border border-transparent active:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">contact_emergency</span>
+<div>
+<p class="font-bold">Emergency</p>
+<p class="text-xs text-slate-500">2 Contacts Active</p>
+</div>
+</div>
+</div>
+</section>
+<!-- My Assistive Needs (Toggles) -->
+<section class="px-6 py-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">My Assistive Needs</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">record_voice_over</span>
+<span class="font-medium">Screen Reader</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-white/20 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">keyboard_command_key</span>
+<span class="font-medium">Voice Commands</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-white/20 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-white/5 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">contrast</span>
+<span class="font-medium">High Contrast</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-white/20 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Community Impact Badges -->
+<section class="px-6 py-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">Community Impact</h3>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-2">
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-yellow-500/20 flex items-center justify-center border-2 border-yellow-500/50">
+<span class="material-symbols-outlined text-yellow-500 text-3xl">star</span>
+</div>
+<span class="text-[10px] font-bold text-center w-16 uppercase">Pioneer</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary/50">
+<span class="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
+</div>
+<span class="text-[10px] font-bold text-center w-16 uppercase">Helper</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center border-2 border-purple-500/50">
+<span class="material-symbols-outlined text-purple-500 text-3xl">map</span>
+</div>
+<span class="text-[10px] font-bold text-center w-16 uppercase">Explorer</span>
+</div>
+<div class="shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center border-2 border-dashed border-slate-400">
+<span class="material-symbols-outlined text-slate-400 text-2xl">lock</span>
+</div>
+<span class="text-[10px] font-bold text-center w-16 uppercase text-slate-400">Locked</span>
+</div>
+</div>
+</section>
+<!-- Saved Places -->
+<section class="px-6 py-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">Saved Places</h3>
+<div class="bg-slate-100 dark:bg-white/5 rounded-xl overflow-hidden">
+<div class="flex items-center gap-4 p-4 border-b border-slate-200 dark:border-white/10">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div class="flex-1">
+<p class="font-bold">Home</p>
+<p class="text-xs text-slate-500">123 Accessibility Ave, San Francisco</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div class="flex-1">
+<p class="font-bold">Work</p>
+<p class="text-xs text-slate-500">Tech Hub Plaza, Ste 400</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-white/10 px-6 py-4 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">directions</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Nav</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">sos</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">SOS</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined font-fill-1">person</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Account</span>
+</button>
+</nav>
+<!-- Safe Area Spacer for iOS -->
+<div class="h-8"></div>
+</div>
+</body></html>

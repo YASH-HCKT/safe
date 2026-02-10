@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Safety Profile Dashboard | AccessOne</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25e2f4",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0a0a0a",
+                        "glass-dark": "rgba(255, 255, 255, 0.03)",
+                        "glass-border": "rgba(37, 226, 244, 0.2)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glassmorphism {
+            backdrop-filter: blur(12px);
+            background: rgba(16, 33, 34, 0.7);
+            border: 1px solid rgba(37, 226, 244, 0.15);
+        }
+        .neo-shadow {
+            box-shadow: 0 0 20px rgba(37, 226, 244, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 border-r border-slate-200 dark:border-white/10 flex flex-col bg-background-light dark:bg-background-dark z-20">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark font-bold">shield_person</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">AccessOne</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span class="text-sm font-medium">Health Metrics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm font-medium">Safety History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">contact_phone</span>
+<span class="text-sm font-medium">Emergency Contacts</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<button class="w-full flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-red-500/20 transition-all">
+<span class="material-symbols-outlined animate-pulse">emergency</span>
+<span>EMERGENCY SOS</span>
+</button>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-y-auto relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<header class="h-16 flex items-center justify-between px-8 border-b border-slate-200 dark:border-white/10 z-10 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="relative">
+<input class="bg-slate-100 dark:bg-white/5 border-none rounded-lg text-sm pl-10 pr-4 py-2 w-64 focus:ring-1 focus:ring-primary" placeholder="Search safety records..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2 text-slate-400 text-sm">search</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-emerald-500">
+<span class="size-2 rounded-full bg-emerald-500"></span>
+<span class="text-xs font-bold uppercase tracking-wider">Systems Nominal</span>
+</div>
+<button class="relative text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 size-2 bg-primary rounded-full border-2 border-background-dark"></span>
+</button>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200 dark:border-white/10">
+<div class="text-right">
+<p class="text-xs font-bold leading-none">Alex Johnson</p>
+<p class="text-[10px] text-slate-500 leading-normal">Premium Member</p>
+</div>
+<img alt="Profile" class="size-10 rounded-full border border-primary/30" data-alt="User profile picture with professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsL5fu8CrmT5mi6AoF03dQ0HGlEItzNzmy1EW04MY54QACJSGjEGxUvmZIjDd362Zqlm37_SfJa_1LdmpeGA2JVUBTQQvhKiMZq1JLvaa22pDsXR9x_wYpzTLr1nF9hHlQaXycRZZeVId-YqsAj0zqrj3WYu46HO_KMUO5-vqFW5fmBJu9oc8K0vbigEej3LGhBFYVDl9oaDQ2rfYdxwjrhrZUxhXAUnYKaGb8rZDVlIknCEDHLuiB8DVkDYVzyQMslV530SfKLkvo"/>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-8 z-10 max-w-7xl mx-auto w-full">
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 glassmorphism rounded-xl p-6 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center md:items-start">
+<div class="relative">
+<img alt="Alex Profile" class="size-32 rounded-2xl object-cover border-2 border-primary/20" data-alt="Large detailed profile picture of Alex Johnson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsAltzJGkun4ChpHrWZhErUT1bgTLg4UnrGQQ8h2P21WdncdTGDQC7QkrDxgz1KKWnK5JjsjO9CP8SB5yX8m0ykBFymAa_LVT5qi6lBigYZdos_CLSJoeP05DJYQJON5WN4NulEFyh9uhHgvi8o02O0PnwgzDfConxCBnrvcwQFr2wFzBfR9Kxt8dEeSnbTLai4on6J-21DyP-1hAiY-NvUO8uLw4LXi-aJCJojACvv-xhzheIZMCBKnAIn5iv15FuoimJtedEbN5_"/>
+<div class="absolute -bottom-2 -right-2 bg-primary text-background-dark size-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm font-bold">edit</span>
+</div>
+</div>
+<div class="flex-1 space-y-4 w-full text-center md:text-left">
+<div>
+<h2 class="text-3xl font-black text-white">Alex Johnson</h2>
+<p class="text-primary font-medium flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-sm">accessible</span>
+                                    Mobility Impaired (Electric Wheelchair User)
+                                </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 rounded-lg p-3 border border-white/5">
+<p class="text-[10px] uppercase text-slate-500 font-bold mb-1">Blood Type</p>
+<p class="text-xl font-bold text-white">O Positive</p>
+</div>
+<div class="bg-white/5 rounded-lg p-3 border border-white/5">
+<p class="text-[10px] uppercase text-slate-500 font-bold mb-1">Allergies</p>
+<p class="text-sm font-medium text-white truncate">Penicillin, Shellfish</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 justify-center md:justify-start">
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-bold text-primary">Fall Detection On</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-bold text-primary">Live Tracking Enabled</span>
+<span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-bold text-primary">SOS Ready</span>
+</div>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-6 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-slate-300">Emergency Contacts</h3>
+<button class="text-primary text-xs font-bold hover:underline">Manage</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5 group hover:border-primary/30 transition-colors">
+<div class="size-10 rounded-full bg-slate-800 flex items-center justify-center text-primary font-bold">SJ</div>
+<div class="flex-1">
+<p class="text-sm font-bold leading-none">Sarah Johnson</p>
+<p class="text-[10px] text-slate-500 uppercase">Primary / Spouse</p>
+</div>
+<button class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-sm">call</span>
+</button>
+</div>
+<div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5 group hover:border-primary/30 transition-colors">
+<div class="size-10 rounded-full bg-slate-800 flex items-center justify-center text-primary font-bold">DR</div>
+<div class="flex-1">
+<p class="text-sm font-bold leading-none">Dr. Robert Chen</p>
+<p class="text-[10px] text-slate-500 uppercase">Personal Physician</p>
+</div>
+<button class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-sm">medical_services</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+<div class="glassmorphism rounded-xl p-5 neo-shadow border-l-4 border-l-primary flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">directions_walk</span>
+</div>
+<span class="text-emerald-400 text-xs font-bold">+12%</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Steps Taken</p>
+<div class="flex items-end gap-2">
+<h4 class="text-3xl font-black text-white">4,231</h4>
+<p class="text-slate-500 text-xs pb-1">/ 6,000</p>
+</div>
+</div>
+<div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-5 neo-shadow flex flex-col gap-4 border-l-4 border-l-primary">
+<div class="flex justify-between items-start">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="flex items-center gap-1 text-primary animate-pulse">
+<span class="text-[10px] font-bold">LIVE</span>
+</div>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Heart Rate</p>
+<div class="flex items-end gap-2">
+<h4 class="text-3xl font-black text-white">72</h4>
+<p class="text-slate-500 text-xs pb-1">BPM</p>
+</div>
+</div>
+<div class="h-6 w-full flex items-center gap-1">
+<div class="bg-primary/20 w-1/12 h-2 rounded-sm"></div>
+<div class="bg-primary/30 w-1/12 h-3 rounded-sm"></div>
+<div class="bg-primary/40 w-1/12 h-5 rounded-sm"></div>
+<div class="bg-primary/60 w-1/12 h-3 rounded-sm"></div>
+<div class="bg-primary/80 w-1/12 h-4 rounded-sm"></div>
+<div class="bg-primary w-1/12 h-6 rounded-sm"></div>
+<div class="bg-primary/80 w-1/12 h-4 rounded-sm"></div>
+<div class="bg-primary/60 w-1/12 h-2 rounded-sm"></div>
+<div class="bg-primary/40 w-1/12 h-3 rounded-sm"></div>
+<div class="bg-primary/20 w-1/12 h-1 rounded-sm"></div>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-5 neo-shadow flex flex-col gap-4 border-l-4 border-l-primary">
+<div class="flex justify-between items-start">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Safety Score</p>
+<h4 class="text-3xl font-black text-white text-emerald-400">98%</h4>
+</div>
+<p class="text-[11px] text-slate-500">System check passed at 09:41 AM</p>
+</div>
+<div class="glassmorphism rounded-xl p-5 neo-shadow flex flex-col gap-4 border-l-4 border-l-primary">
+<div class="flex justify-between items-start">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">pill</span>
+</div>
+<span class="bg-orange-500/20 text-orange-500 text-[10px] px-2 py-0.5 rounded font-bold">1 UPCOMING</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Medication</p>
+<h4 class="text-sm font-bold text-white mt-1">Lisinopril 10mg</h4>
+<p class="text-slate-500 text-xs">Scheduled for 12:00 PM</p>
+</div>
+<button class="w-full bg-primary/10 hover:bg-primary/20 text-primary text-[11px] font-bold py-1.5 rounded-lg border border-primary/20 transition-all">
+                            Mark as Taken
+                        </button>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                                Safety &amp; Route History
+                            </h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-white/5 rounded text-[11px] font-bold text-slate-400 border border-white/5">All Logs</button>
+<button class="px-3 py-1 bg-primary/10 rounded text-[11px] font-bold text-primary border border-primary/20">SOS Alerts</button>
+</div>
+</div>
+<div class="space-y-3">
+<div class="glassmorphism rounded-xl p-4 flex items-center gap-4 border-l-4 border-l-emerald-500">
+<div class="bg-emerald-500/10 text-emerald-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">route</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-white">Safe Route: Downtown Park Loop</p>
+<p class="text-xs text-slate-500">Completed at 08:30 AM • 2.4 miles • Elevated Heart Rate detected but within safe limits.</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Today</p>
+<span class="material-symbols-outlined text-emerald-500">check_circle</span>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-4 flex items-center gap-4 border-l-4 border-l-red-500 bg-red-500/5">
+<div class="bg-red-500/10 text-red-500 p-2 rounded-lg">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-white">SOS Alert: Potential Fall Detected</p>
+<p class="text-xs text-slate-500">Automatic SOS triggered near 4th &amp; Madison. Resolved by user: "I'm okay" confirmation received.</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Oct 12</p>
+<span class="material-symbols-outlined text-red-500">error</span>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-4 flex items-center gap-4 border-l-4 border-l-primary">
+<div class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">home_pin</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-white">Safety Check-in: Home</p>
+<p class="text-xs text-slate-500">Manual safety status update from home residence. Connection: Mesh-Network Stable.</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Oct 11</p>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">map</span>
+                            Live Location
+                        </h3>
+<div class="glassmorphism rounded-xl p-4 h-64 relative overflow-hidden group">
+<div class="absolute inset-0 grayscale opacity-40 group-hover:opacity-60 transition-opacity">
+<img alt="Map" class="w-full h-full object-cover" data-alt="Satellite map view of city streets with a blue glowing dot" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjgVACSoFEZQvyvznKTurbYdtYvdKiVUAV3hq9oADmB0hQ_KihmY6U3-pZrhBF1MLRxjnxok5KVVjiiLxGDqt5baBC2kICTP3AtUceI6EiYPBKtZQwW8dHpLq2GSwlw5yA57ojQMPSZ6VrideP8s_gxHDZhWQtbZJbVWtj60b_vlyCW_tca1orumt3lfyI3nIsNvoNqjtuFvATXb9aS4gsQpce7Nx6j0fJL2BF8cUHTyLxeG91kzk-KySgAdvZyosWDveZmVWSTzhh"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/20 rounded-full animate-ping"></div>
+<div class="size-6 bg-primary rounded-full border-4 border-white neo-shadow relative z-10"></div>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-background-dark/90 border border-white/10 rounded-lg p-3 backdrop-blur-sm">
+<p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Current Location</p>
+<p class="text-xs text-white font-medium truncate">742 Evergreen Terrace, Springfield</p>
+</div>
+</div>
+<div class="glassmorphism rounded-xl p-5 space-y-4">
+<p class="text-sm font-bold text-slate-300">Device Connectivity</p>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">watch</span>
+<span class="text-slate-400">Smart Watch Series 8</span>
+</div>
+<span class="text-emerald-500 font-bold">84%</span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">wheelchair_pickup</span>
+<span class="text-slate-400">PowerChair Controller</span>
+</div>
+<span class="text-emerald-500 font-bold">Connected</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

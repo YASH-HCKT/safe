@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1973f0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Account</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-slate-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+</div>
+<!-- Profile Section -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-6 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-5 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24 border-4 border-primary/20" data-alt="Professional headshot of a smiling man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoTvGQFdS_hNtKRMIrdLOC-aK6hVXnIV29Rg-33X8QvzOKuZ_S5P2DP1LdveK6HeT6-T6zkbkaq1lyhg4ZPLMwdQsUga2v8Zv5smLehoB1v54TfFlxgrWOCAp2b1gOfdatLYZzXZOEBr_97bjrsmALNRaVqhZdflHx_H4dSl2z3DXpnEpNSYIZkRT5p4KzH8qsxAFexGoXLmFe7SMaaAMgWVd8nRFLJXzZDrhLsAUvncjHRxFM9o_ZGFUhSW5OXtHz0r92k2TUS2Gi");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Alex Johnson</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-sm font-normal leading-normal">Member since Oct 2023</p>
+</div>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] w-full @[480px]:w-auto">
+<span>Edit Profile</span>
+</button>
+</div>
+</div>
+<!-- My Needs Section -->
+<div class="px-4">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 pt-2">My Needs</h3>
+<div class="flex flex-col gap-3">
+<!-- Toggle Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-primary shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-semibold leading-tight">Screen Reader Optimization</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs font-normal leading-normal mt-1">Enhances labels for VoiceOver</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl">contrast</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-semibold leading-tight">High Contrast Mode</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs font-normal leading-normal mt-1">Increases visibility of text</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Toggle Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-lg bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-semibold leading-tight">Simplified Layout</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-xs font-normal leading-normal mt-1">Reduces visual noise and clutter</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Saved Locations -->
+<div class="px-4 mt-8">
+<div class="flex items-center justify-between pb-4">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Saved Locations</h3>
+<button class="text-primary text-sm font-bold">Add New</button>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
+<!-- Home Card -->
+<div class="flex flex-col min-w-[140px] bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl">
+<div class="bg-primary/10 text-primary w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">home</span>
+</div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Home</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-[10px] mt-1 line-clamp-1">123 Maple Avenue</p>
+</div>
+<!-- Work Card -->
+<div class="flex flex-col min-w-[140px] bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl">
+<div class="bg-primary/10 text-primary w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">work</span>
+</div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Work</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-[10px] mt-1 line-clamp-1">Tech Park Central</p>
+</div>
+<!-- Clinic Card -->
+<div class="flex flex-col min-w-[140px] bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-4 rounded-xl">
+<div class="bg-primary/10 text-primary w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<p class="text-slate-900 dark:text-white font-bold text-sm">Main Clinic</p>
+<p class="text-slate-500 dark:text-[#91a9ca] text-[10px] mt-1 line-clamp-1">City Health Center</p>
+</div>
+</div>
+</div>
+<!-- Account Settings Menu -->
+<div class="px-4 mt-4 mb-24">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 pt-2">Account Settings</h3>
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden divide-y divide-slate-200 dark:divide-slate-800">
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">lock</span>
+<span class="text-slate-900 dark:text-white font-medium">Privacy &amp; Security</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+<span class="text-slate-900 dark:text-white font-medium">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">help</span>
+<span class="text-slate-900 dark:text-white font-medium">Support Center</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">logout</span>
+<span class="text-red-500 font-medium">Log Out</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Navigation (Mock) -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 px-6 flex items-center justify-between z-20">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-[10px] font-medium">Routes</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</div>
+</div>
+</body></html>
